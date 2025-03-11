@@ -28,7 +28,7 @@ class CoursesController < ApplicationController
 
   def update
     id = params.fetch("path_id")
-    @course = Course.where({ :id => the_id }).at(0)
+    @course = Course.where({ :id => id }).at(0)
 
     @course.title = params.fetch("query_title")
     @course.term_offered = params.fetch("query_term_offered")
